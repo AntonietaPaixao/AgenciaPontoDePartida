@@ -1,0 +1,366 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%><!-- mUDAR PARA utf-8 -->
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Agencia Ponto de Partida</title>
+    <!-- link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"-->
+
+    <!--Fontes Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS e Icones Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <!--CSS Pesronalizado-->
+    <link rel="stylesheet" href="css/estilos.css"><!-- ALTERARRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR -->
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+        </script>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top bg-primary-color" id="navbar">
+            <div class="container py-1">
+                <a class="navbar-brand" href="#">
+                    <img src="img/icone-PontoPartida.png" alt="Home" />
+                    <span class="quaternary-color">Ponto de Partida</span>
+                </a>
+                <!--Botão responsivo de menu-->
+                <button class="navbar-toggler bg-secondary-color" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbar-items" aria-controls="navbar-items" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="bi bi-list"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar-items">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navbar-li">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.jsp">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pacotes.jsp">Pacotes</a> <!--ALTERAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARRRRR -->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="promocoes.jsp">Promoções</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contato.jsp">Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.jsp">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!--SESSÃO DE BANNERS E MINI BANNERS-->
+        <section>
+            <div class="container" id="slider-container">
+                <!--Banners Carrossel-->
+                <div id="slider" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#slider" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#slider" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#slider" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#slider" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/banner-1.png" class="d-block w-100" alt="Taça campeonato Brasileiro 2021" />
+                            <div class="carousel-caption">
+                                <h5>Campeonato Brasileiro</h5>
+                                <a href="pacotes.jsp" class="btn btn-dark">Pacotes Para as Próximas Partidas</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/banner-2.png" class="d-block w-100" alt="Estádio 2" />
+                            <div class="carousel-caption">
+                                <h5>Copa do Brasil</h5>
+                                <a href="pacotes.jsp" class="btn btn-dark">Pacotes Para as Próximas Partidas</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/banner-3.png" class="d-block w-100" alt="Emblemas de times do brasileiros" />
+                            <div class="carousel-caption">
+                                <h5>Campeonatos Estaduais</h5>
+                                <a href="pacotes.jsp" class="btn btn-dark">Pacotes Para as Próximas Partidas</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/banner-4.png" class="d-block w-100" alt="Taça ibertadores 2021" />
+                            <div class="carousel-caption">
+                                <h5>Libertadores</h5>
+                                <a href="pacotes.jsp" class="btn btn-dark">Pacotes Para as Próximas Partidas</a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
+                        <i class="bi bi-chevron-compact-left"></i>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
+                        <i class="bi bi-chevron-compact-right"></i>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+                <!--Mini Banners-->
+                <div class="col-12 col-md-10 offset-md-1" id="mini-banners">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <div class="card text-center bg-primary-color">
+                                <i class="bi bi-credit-card"></i>
+                                <div class="card-body">
+                                    <h5 class="card-title tertiary-color">Formas de Pagamento</h5>
+                                    <p class="card-text quaternary-color">
+                                        Facilitamos a compra do seu pacote, dividindo em até 12x sem jutos no cartão,
+                                        além de descontos em pagamentos à vista.
+                                    </p>
+                                    <a href="#" class="btn btn-dark ">Saber Mais</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="card text-center bg-primary-color">
+                                <i class="bi bi-building"></i>
+                                <div class="card-body">
+                                    <h5 class="card-title tertiary-color">Acomodações</h5>
+                                    <p class="card-text quaternary-color">
+                                        <br>Todos os pacotes oferecem acomodações 5 estrelas, próximas aos locais dos Jogos
+                                        e com 3 refeições inclusas.
+                                    </p>
+                                    <a href="#" class="btn btn-dark">Saber Mais</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="card text-center bg-primary-color">
+                                <i class="bi bi-lock"></i>
+                                <div class="card-body primary-color">
+                                    <h5 class="card-title tertiary-color">
+                                        Segurança
+                                    </h5>
+                                    <p class="card-text quaternary-color">
+                                        Seguro seguro de vida individual.<br>
+                                        Motoristas qualificados<br>
+                                        Frota nova com manutenção periódicas em dia.
+                                    </p>
+                                    <a href="#" class="btn btn-dark">Saber Mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--SESSÃO DE DESTAQUES-->
+        <section>
+            <div class="container" id="featured-container">
+                <div class="col-12">
+                    <h2 class="title primary-color">Pacotes Turísticos Premium </h2>
+                    <p class="subtitle secondary-color">
+                        Destinos especiais que todo amante de futebol deve conhecer
+                    </p>
+                </div>
+                <div class="col-12" id="featured-images">
+                    <div class="row g-4">
+                        <div class="col-12 col-md-4">
+                            <img src="img/premium-1.png" alt="Projeto 1" class="img-fluid" />
+                            <div class="banner-content">
+                                <p class="secondary-color">Capital do país, capital do futebol espanhol.</p>
+                                <h3><a href="./views/Compra/createCompra.jsp">Madri, Espanha</a></h3>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <img src="img/premium-2.png" alt="Projeto 2" class="img-fluid" />
+                            <div class="banner-content">
+                                <p class="secondary-color">Famosa por suas praias e pelo seu futebol.</p>
+                                <h3><a href="./views/Compra/createCompra.jsp">Rio de Janeiro, Brasil</a></h3>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <img src="img/premium-3.png" alt="Projeto 3" class="img-fluid" />
+                            <div class="banner-content">
+                                <p class="secondary-color">Líder no mundo da moda e com grandes equipes.</p>
+                                <h3><a href="./views/Compra/createCompra.jsp">Milão, Itália</a></h3>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <img src="img/premium-4.png" alt="Projeto 4" class="img-fluid" />
+                            <div class="banner-content">
+                                <p class="secondary-color">Arquitetura representativa e muita história no esporte</p>
+                                <h3><a href="./views/Compra/createCompra.jsp">Munique, Alemanha</a></h3>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <img src="img/premium-5.png" alt="Projeto 5" class="img-fluid" /><!--ALTERAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARRRRR -->
+                            <div class="banner-content">
+                                <p class="secondary-color">Incrível história, moda e atacantes</p>
+                                <h3><a href="./views/Compra/createCompra.jsp">Londres, Inglaterra</a></h3>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <img src="img/premium-6.png" alt="Projeto 6" class="img-fluid" />
+                            <div class="banner-content">
+                                <p class="secondary-color">Uma das metrópoles mais importantes para o futebol</p>
+                                <h3><a href="./views/Compra/createCompra.jsp">Cidade do México, México</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--SESSÃO DE  INFORMAÇÕES-->
+        <section>
+            <div class="container" id="info-container">
+                <div class="col-12">
+                    <h2 class="title primary-color">Somos craques no que fazemos</h2>
+                    <p class="subtitle secondary-color">
+                        A torcida vai à LOUCURAAAAAAAAAAAAAAAAAAH!!!
+                    </p>
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12 col-md-5" id="info-banner">
+                            <img src="img/banner-nossos-gols.png" alt="Informações" class="img-fluid" />
+                        </div>
+                        <div class="col-12 col-md-7 bg-secondary-color" id="info-content">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h2 class="title">Nossos Gols de Placa:</h2>
+                                    <p class="subtitle secondary-color">
+                                        Somos apaixonados por viagens e esportes e os unimos
+                                        para oferecer as melhores experiências.
+                                        Nosso maior objetivo é proporcionair aos clientes
+                                        tranquilidade e conforto na retirada dos ingressos e
+                                        logística no local do evento.
+                                    </p>
+                                </div>
+                                <div class="col-12" id="info-numbers">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <h3 class="primary-color">São 20</h3>
+                                            <p class="secondary-color">Anos de turismo futebolístico</p>
+                                        </div>
+                                        <div class="col-4">
+                                            <h3 class="primary-color">+ de 500</h3>
+                                            <p class="secondary-color">Viagens realizadas</p>
+                                        </div>
+                                        <div class="col-4">
+                                            <h3 class="primary-color">+ de Mil</h3>
+                                            <p class="secondary-color">Clientes</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <a class="btn btn-dark">Saber Mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="container-fluid bg-primary-color" id="footer">
+        <div class="container">
+            <div class="row">
+                <!-- FOOTER TOP -->
+                <div class="col-12" id="footer-top">
+                    <div class="row justify-content-between">
+                        <div class="col-4">
+                            <h2>
+                                Ponto de Partida
+                            </h2>
+                        </div>
+                        <div class="col-4" id="social-icons">
+                            <i class="bi bi-facebook"></i>
+                            <i class="bi bi-instagram"></i>
+                            <i class="bi bi-youtube"></i>
+                            <i class="bi bi-twitter"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- FOOTER DETAILS -->
+                <div class="col-12" id="footer-details">
+                    <div class="row">
+                        <div class="col-12 col-md-4" id="news-container">
+                            <h4>Saiba o que está rolando em campo</h4>
+                            <p class="quaternary-color">
+                                Inscreva-se para saber em primeira mão
+                            </p>
+                            <form>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Digite o seu e-mail" />
+                                </div>
+                                <button class="btn btn-dark">Inscrever</button>
+                            </form>
+                        </div>
+                        <div class="col-12 col-md-4" id="contact-container">
+                            <h4>Formas de contato</h4>
+                            <p class="quaternary-color">(99)9999-9999</p>
+                            <p class="quaternary-color">contato@pontodepartida.com.br</p>
+                        </div>
+                        <div class="col-12 col-md-4" id="links-container">
+                            <div class="row">
+                                <h4>Você pode estar buscando por:</h4>
+                                <div class="col-6">
+                                    <ul class="list-unstyled">
+                                        <li><a href="#" class="quaternary-color">Pacotes</a></li>
+                                        <li><a href="#" class="quaternary-color">Campeonatos</a></li>
+                                        <li><a href="#" class="quaternary-color">Vendas</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-6">
+                                    <ul class="list-unstyled">
+                                        <li><a href="#" class="quaternary-color">Contato</a></li>
+                                        <li>
+                                            <a href="#" class="quaternary-color">Endereço</a>
+                                        </li>
+                                        <li><a href="#" class="quaternary-color">Cancelamentos</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- FOOTER BOTTOM -->
+                <div class="col-12" id="footer-bottom">
+                    <div class="row justify-content-between">
+                        <div class="col-12 col-md-3">
+                            <p class="tertiary-color">Ponto de Partida &copy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
