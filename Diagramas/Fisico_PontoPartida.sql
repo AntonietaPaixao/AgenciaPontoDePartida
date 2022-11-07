@@ -22,7 +22,7 @@ CREATE TABLE ENDERECO (
 
 CREATE TABLE PESSOA (
     idPessoa INT NOT NULL UNIQUE AUTO_INCREMENT,
-    cpf VARCHAR(11),
+    senha VARCHAR(20),
     nomePessoa VARCHAR(50),
     dataNascimento DATE,
     sexo VARCHAR(10),
@@ -40,9 +40,9 @@ CREATE TABLE PESSOA (
 	CREATE TABLE PARTIDA (
     idPartida INT NOT NULL UNIQUE AUTO_INCREMENT,
     dataPartida DATE,
-    nomeCampeonato VARCHAR(10),
-    timeCasa VARCHAR(10),
-    timeConvidado VARCHAR(10),
+    nomeCampeonato VARCHAR(20),
+    timeCasa VARCHAR(15),
+    timeConvidado VARCHAR(15),
 	PRIMARY KEY(idPartida)
 );
 
@@ -61,6 +61,7 @@ CREATE TABLE PACOTEPARTIDA (
 CREATE TABLE COMPRA (
     idCompra INT NOT NULL UNIQUE AUTO_INCREMENT,
     valorCompra DECIMAL,
+	valorDescontoPromocao DECIMAL,
     quantPacotes INTEGER,
     dataCompra DATE,
     idPessoa INT,
@@ -73,6 +74,7 @@ CREATE TABLE COMPRA (
 CREATE TABLE ITENSCOMPRA (
     idItemCompra INT NOT NULL UNIQUE AUTO_INCREMENT,
 	idCompra INT,
+    quantidade INT,
     idPacotePartida INT,
 	PRIMARY KEY(idItemCompra),
 	FOREIGN KEY (idCompra)
